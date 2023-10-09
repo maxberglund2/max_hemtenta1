@@ -58,6 +58,7 @@ const createDivTask = (task) => {
     listItem.setAttribute("class", "d-flex justify-content-between align-items-center mt-2 border rounded-1 p-2");
     del.setAttribute("class", "btn btn-danger mx-1");
     edit.setAttribute("class", "btn btn-primary");
+    box.setAttribute("class", "form-check-input mt-0");
 };
 
 const createTask = () => {
