@@ -1,13 +1,14 @@
 const container = document.getElementById("container");
+const con = document.createElement("ul");
 let taskArray = [];
 
 const createDivTask = (task) => {
-    const con = document.createElement("div");
-    const form = document.createElement("form");
+    const listItem = document.createElement("li");
 
     container.appendChild(con);
-    con.appendChild(form);
-    form.setAttribute("action", "#");
+    con.appendChild(listItem);
+    con.setAttribute("class", "list-group");
+    listItem.setAttribute("class", "list-group-item");
 
     const box = document.createElement("input");
     box.setAttribute("type", "checkbox");
@@ -24,9 +25,9 @@ const createDivTask = (task) => {
     buttonsCon.appendChild(del);
     buttonsCon.appendChild(edit);
 
-    form.appendChild(box);
-    form.appendChild(text);
-    form.appendChild(buttonsCon);
+    listItem.appendChild(box);
+    listItem.appendChild(text);
+    listItem.appendChild(buttonsCon);
 
     text.textContent = task;
 
@@ -54,7 +55,7 @@ const createDivTask = (task) => {
     });
 
     //BOOTSTRAP
-    form.setAttribute("class", "d-flex justify-content-between align-items-center mt-2 border rounded-1 p-2");
+    listItem.setAttribute("class", "d-flex justify-content-between align-items-center mt-2 border rounded-1 p-2");
     del.setAttribute("class", "btn btn-danger mx-1");
     edit.setAttribute("class", "btn btn-primary");
 };
