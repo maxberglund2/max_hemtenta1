@@ -46,8 +46,11 @@ const createDivTask = (task) => {
     }
 
     del.addEventListener("click", () => {
-        container.removeChild(con);
+        const listItemToRemove = del.parentElement.parentElement; 
+        con.removeChild(listItemToRemove); 
     });
+    
+    
 
     edit.addEventListener("click", () => {
         text.textContent = document.getElementById("task").value;
